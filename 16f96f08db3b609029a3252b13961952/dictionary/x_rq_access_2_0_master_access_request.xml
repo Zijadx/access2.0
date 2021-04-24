@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Master Access Request" max_length="40" name="x_rq_access_2_0_master_access_request" type="collection">
+        <element attributes="encode_utf8=false" label="Assigned to" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Assignment group" max_length="32" name="assignment_group" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="1000" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Short description" max_length="255" name="short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice/>
+        </element>
+        <index name="index">
+            <element name="assignment_group"/>
+        </index>
+        <index name="index2">
+            <element name="company"/>
+        </index>
+        <index name="index3">
+            <element name="assigned_to"/>
+        </index>
+    </element>
+</database>

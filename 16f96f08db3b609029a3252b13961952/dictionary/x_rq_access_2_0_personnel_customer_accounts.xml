@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Personnel Customer Accounts " max_length="40" name="x_rq_access_2_0_personnel_customer_accounts" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Access Tracker ID" max_length="40" name="access_tracker_id" type="string"/>
+        <element attributes="encode_utf8=false" label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Component Name" max_length="40" name="component_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Customer Account" max_length="40" name="customer_account" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Hostname" max_length="255" name="hostname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Status" max_length="40" name="status" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Technology" max_length="40" name="technology" type="string"/>
+        <element attributes="encode_utf8=false" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Username" max_length="40" name="username" type="string"/>
+        <index name="index">
+            <element name="company"/>
+        </index>
+        <index name="index2">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

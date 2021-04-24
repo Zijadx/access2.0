@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Access Tracking " max_length="40" name="x_rq_access_2_0_access_tracking" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Access Level" max_length="40" name="access_level" type="string"/>
+        <element attributes="encode_utf8=false" label="Access Request" max_length="32" name="access_request" reference="x_rq_access_2_0_access_request" type="reference"/>
+        <element attributes="encode_utf8=false" label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Component" max_length="40" name="component" type="choice">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Customer Account" max_length="32" name="customer_account" reference="x_rq_access_2_0_customer_accounts" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Date Password Changed" max_length="40" name="date_password_changed" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Date Password Expires" max_length="40" name="date_password_expires" type="glide_date"/>
+        <element attributes="encode_utf8=false" label="Group" max_length="32" name="group" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Last Verified Date" max_length="40" name="last_verified_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="encode_utf8=false" label="Open Ticket" max_length="32" name="open_ticket" reference="incident" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Root Cause of Access Issue" max_length="40" name="root_cause_of_access_issue" type="string"/>
+        <element label="SSH Access" max_length="40" name="ssh_access" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Technologies" max_length="40" name="technologies" type="string"/>
+        <element attributes="encode_utf8=false" label="Technology" max_length="32" name="technology" reference="u_master_technology" type="reference"/>
+        <element attributes="encode_utf8=false" label="User" max_length="32" name="user" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="customer_account"/>
+        </index>
+        <index name="index2">
+            <element name="open_ticket"/>
+        </index>
+        <index name="index3">
+            <element name="access_request"/>
+        </index>
+        <index name="index4">
+            <element name="company"/>
+        </index>
+        <index name="index5">
+            <element name="technology"/>
+        </index>
+        <index name="index6">
+            <element name="user"/>
+        </index>
+        <index name="index7">
+            <element name="group"/>
+        </index>
+    </element>
+</database>

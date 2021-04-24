@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Customer Accounts" max_length="40" name="x_rq_access_2_0_customer_accounts" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Authentication Type" max_length="40" name="authentication_type" type="choice">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Company" max_length="32" name="company" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Component Name" max_length="40" name="component_name" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Customer Account" max_length="40" name="customer_account" type="string"/>
+        <element label="Has RSA Binding ID" max_length="40" name="has_rsa_binding_id" type="boolean"/>
+        <element label="Has Symantec ID" max_length="40" name="has_symantec_id" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Hostname" max_length="40" name="hostname" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Permissions" max_length="40" name="permissions" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="RSA Binding ID" max_length="40" name="rsa_binding_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Symantec ID" max_length="40" name="symantec_id" type="string"/>
+        <element attributes="encode_utf8=false" label="Team Access" max_length="32" name="team_access" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Technology" max_length="40" name="technology" type="string"/>
+        <index name="index">
+            <element name="team_access"/>
+        </index>
+        <index name="index2">
+            <element name="company"/>
+        </index>
+    </element>
+</database>
